@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Service and Asset Tracker</title>
+
+  <!-- Bootstrap -->
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- Datatables -->
+  <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+  <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery custom content scroller -->
+  <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+  <!-- Custom Theme Style -->
+  <link href="build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col menu_fixed">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index-page.html" class="site_title">
+              <i class="fa fa-book"></i>
+              <span>S&amp;AT</span>
+            </a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>John Doe</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>Main Menu</h3>
+                <ul class="nav side-menu">
+                  <li>
+                    <a href="index-page.html">
+                      <i class="fa fa-home"></i> Dashboard </a>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-exchange"></i> Reseller
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li>
+                        <a> Reseller
+                          <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                          <li>
+                            <a href="reseller.html">List Reseller</a>
+                          </li>
+                          <li>
+                            <a href="add-reseller.html">Add Reseller</a>
+                          </li>
+                        </ul>
+                      </li>
+  
+                      <li>
+                        <a> Reseller Customer
+                          <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                          <li>
+                            <a href="reseller-customer.html">List Reseller Customer</a>
+                          </li>
+                          <li>
+                            <a href="reseller-customer-add.html">Add Reseller Customer</a>
+                          </li>
+                        </ul>
+                      </li>
+  
+                      <li>
+                        <a>Reseller Service
+                          <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                          <li>
+                            <a href="reseller-service.html">List Reseller Service</a>
+                          </li>
+                          <li>
+                            <a href="reseller-service-add.html">Add Reseller Service</a>
+                          </li>
+                        </ul>
+                      </li>
+  
+                      <li>
+                        <a>Reseller DLSM Product
+                          <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                          <li>
+                            <a href="reseller-product.html">List DLSM Product</a>
+                          </li>
+                          <li>
+                            <a href="reseller-product-add.html">Add DLSM Product</a>
+                          </li>
+                        </ul>
+                      </li>
+  
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-shopping-cart"></i>Purchase Order
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+  
+                    <ul class="nav child_menu">
+  
+                      <li>
+                        <a href="order.html">List Purchase Order</a>
+                      </li>
+  
+                      <li>
+                        <a href="order-add.html">Add Purchase Order</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-sitemap"></i>Job Reference
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+  
+                    <ul class="nav child_menu">
+                      <li>
+                        <a href="job-reference.html">List Job Reference
+                        </a>
+                      </li>
+  
+                      <li>
+                        <a href="add-job-reference.html">Add Job Reference</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-clone"></i> Service Job
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li>
+                        <a href="service-job.html">List Service Job
+                        </a>
+                      </li>
+                      <li>
+                        <a href="add-service-job.html">Add Service Job</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-bar-chart-o"></i> Reports
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li>
+                        <a href="rpt-serial-number.html">Serial Number</a>
+                      </li>
+                      <li>
+                        <a href="rpt-service-billing.html">Ad hoc Service Billing </a>
+                      </li>
+                      <li>
+                        <a href="rpt-dlms.html">DLMS Report </a>
+                      </li>
+                      <li>
+                        <a href="rpt-po.html">Purchase Order Reports </a>
+                      </li>
+  
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-users"></i> User Management
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li>
+                        <a href="users-list.html">User Accounts
+                        </a>
+                      </li>
+                      <li>
+                        <a href="user-activity.html">User Activity</a>
+                      </li>
+                      <li>
+                        <a href="user-add.html">Add User</a>
+                      </li>
+  
+                    </ul>
+                  </li>
+  
+                  <li>
+                    <a>
+                      <i class="fa fa-folder-o"></i> Others
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li>
+                        <a href="stock-type.html">Stock Type
+                        </a>
+                      </li>
+                      <li>
+                        <a href="categories.html">Categories</a>
+                      </li>
+                    </ul>
+                  </li>
+  
+                </ul>
+              </div>
+  
+            </div>
+          <!-- /sidebar menu -->
+
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="images/img.jpg" alt="">John Doe
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li>
+                    <a href="javascript:;"> Profile</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="badge bg-red pull-right">50%</span>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">Help</a>
+                  </li>
+                  <li>
+                    <a href="login.html">
+                      <i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>Reseller</h3>
+            </div>
+
+            <div class="title_right">
+              <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>List Reseller</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                      <a style="color: white;" href="add-reseller.html" class="btn btn-primary">Add Reseller</a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="x_content">
+                  <table id="datatable" class="table table-striped table-bordered">
+                    <thead>
+                      <tr class="headings">
+                        <th class="column-title">Reseller ID </th>
+                        <th class="column-title">Trading Name</th>
+                        <th class="column-title">Address</th>
+                        <th class="column-title">City</th>
+                        <th class="column-title">Contact Name</th>
+                        <th class="column-title">Email</th>
+                        <th class="column-title no-link last">Phone number</th>
+                      </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                      <tr>
+                        <td>
+                          <a href="details-reseller.html">100</a>
+                        </td>
+                        <td>Forbes, Sopoline T.</td>
+                        <td>415-9436 Semper Road</td>
+                        <td>Río Ibáñez</td>
+                        <td>Ciaran</td>
+                        <td>aliquam@faucibus.ca</td>
+                        <td>1-807-606-5990</td>
+                      </tr>
+
+                      <tr>
+                        <td>101</td>
+                        <td>Stevens, Daquan D.</td>
+                        <td>Ap #952-3996 Eleifend Street</td>
+                        <td>Bastia Umbra</td>
+                        <td>Dominic</td>
+                        <td>justo.eu.arcu@tempusnonlacinia.co.uk</td>
+                        <td>1-453-364-1322</td>
+                      </tr>
+                      <tr>
+                        <td>102</td>
+                        <td>Osborn, Jada H.</td>
+                        <td>P.O. Box 841, 1033 Mollis Ave</td>
+                        <td>Hanret</td>
+                        <td>Geoffrey</td>
+                        <td>non.lorem@fermentumconvallis.edu</td>
+                        <td>1-159-485-0281</td>
+                      </tr>
+                      <tr>
+                        <td>103</td>
+                        <td>Sullivan, Robin T.</td>
+                        <td>Ap #111-1782 Et, Avenue</td>
+                        <td>Lint</td>
+                        <td>Kaseem</td>
+                        <td>lorem.vehicula@magna.org</td>
+                        <td>1-895-955-3142</td>
+                      </tr>
+                      <tr>
+                        <td>104</td>
+                        <td>Murphy, Farrah F.</td>
+                        <td>Ap #254-1883 Hendrerit Street</td>
+                        <td>Cedar Rapids</td>
+                        <td>Kareem</td>
+                        <td>Cum.sociis.natoque@pedenonummyut.ca</td>
+                        <td>1-781-118-0054</td>
+                      </tr>
+                      <tr>
+                        <td>105</td>
+                        <td>Graves, Barry Z.</td>
+                        <td>Ap #328-6044 Ultrices. St.</td>
+                        <td>Vaux-lez-Rosieres</td>
+                        <td>Christopher</td>
+                        <td>facilisis@Mauris.org</td>
+                        <td>1-178-493-3261</td>
+                      </tr>
+                      <tr>
+                        <td>106</td>
+                        <td>Hinton, Hayden R.</td>
+                        <td>Ap #690-324 Quisque Road</td>
+                        <td>Florenville</td>
+                        <td>Xanthus</td>
+                        <td>eget.magna@auctorMauris.ca</td>
+                        <td>1-480-799-3994</td>
+                      </tr>
+                      <tr>
+                        <td>107</td>
+                        <td>Vance, Tatyana O.</td>
+                        <td>Ap #773-6703 Vivamus Ave</td>
+                        <td>New Maryland</td>
+                        <td>Solomon</td>
+                        <td>vel@amet.org</td>
+                        <td>1-340-547-0237</td>
+                      </tr>
+                      <tr>
+                        <td>108</td>
+                        <td>Johns, Emerson H.</td>
+                        <td>4987 Ac Av.</td>
+                        <td>Cabo de Hornos</td>
+                        <td>Moses</td>
+                        <td>Fusce@eleifendvitaeerat.ca</td>
+                        <td>1-542-621-7795</td>
+                      </tr>
+                      <tr>
+                        <td>109</td>
+                        <td>Barry, Vivien J.</td>
+                        <td>555-6636 Risus Road</td>
+                        <td>Garbsen</td>
+                        <td>Colorado</td>
+                        <td>suscipit@lectusa.edu</td>
+                        <td>1-328-755-7067</td>
+                      </tr>
+                      <tr>
+                        <td>110</td>
+                        <td>Hinton, Gabriel W.</td>
+                        <td>543-1769 Malesuada Av.</td>
+                        <td>Offenbach am Main</td>
+                        <td>Merrill</td>
+                        <td>ac.libero.nec@vulputateveliteu.ca</td>
+                        <td>1-445-705-4995</td>
+                      </tr>
+                      <tr>
+                        <td>111</td>
+                        <td>Riggs, Keely Y.</td>
+                        <td>P.O. Box 437, 6429 Ipsum Rd.</td>
+                        <td>Ujjain</td>
+                        <td>Branden</td>
+                        <td>diam.vel.arcu@luctusutpellentesque.org</td>
+                        <td>1-460-224-4197</td>
+                      </tr>
+                      <tr>
+                        <td>112</td>
+                        <td>Fuentes, Fleur E.</td>
+                        <td>223-7122 Nisi. Av.</td>
+                        <td>El Quisco</td>
+                        <td>Xanthus</td>
+                        <td>nisl.Maecenas@dui.net</td>
+                        <td>1-652-558-1983</td>
+                      </tr>
+                      <tr>
+                        <td>113</td>
+                        <td>Porter, Tyler U.</td>
+                        <td>Ap #281-9087 Proin Road</td>
+                        <td>Municipal District</td>
+                        <td>Marsden</td>
+                        <td>luctus@odioAliquamvulputate.net</td>
+                        <td>1-330-996-1576</td>
+                      </tr>
+                      <tr>
+                        <td>114</td>
+                        <td>Stark, Akeem K.</td>
+                        <td>734-795 Nascetur St.</td>
+                        <td>Carleton</td>
+                        <td>Herrod</td>
+                        <td>ipsum.leo@noncursus.ca</td>
+                        <td>1-178-579-8792</td>
+                      </tr>
+                      <tr>
+                        <td>115</td>
+                        <td>Jefferson, Taylor W.</td>
+                        <td>Ap #171-3803 Iaculis St.</td>
+                        <td>Cabo de Santo Agostinho</td>
+                        <td>Robert</td>
+                        <td>magnis.dis@sapien.com</td>
+                        <td>1-164-880-0671</td>
+                      </tr>
+                      <tr>
+                        <td>116</td>
+                        <td>Gilmore, Rylee Y.</td>
+                        <td>P.O. Box 653, 6391 Lacus. Street</td>
+                        <td>Latur</td>
+                        <td>William</td>
+                        <td>justo.nec@Quisque.co.uk</td>
+                        <td>1-747-824-0511</td>
+                      </tr>
+                      <tr>
+                        <td>117</td>
+                        <td>Berry, Tanner S.</td>
+                        <td>Ap #366-1323 Ut Avenue</td>
+                        <td>Kobbegem</td>
+                        <td>Zahir</td>
+                        <td>pede.ac.urna@sitamet.com</td>
+                        <td>1-450-483-1902</td>
+                      </tr>
+                      <tr>
+                        <td>118</td>
+                        <td>Hancock, Tatyana U.</td>
+                        <td>7602 Gravida St.</td>
+                        <td>Rock Springs</td>
+                        <td>Davis</td>
+                        <td>arcu.Vestibulum@lobortistellus.com</td>
+                        <td>1-628-871-2644</td>
+                      </tr>
+                      <tr>
+                        <td>119</td>
+                        <td>Booth, Knox G.</td>
+                        <td>379-2228 Laoreet Street</td>
+                        <td>Chiauci</td>
+                        <td>Zachery</td>
+                        <td>id.magna.et@molestie.org</td>
+                        <td>1-328-959-8674</td>
+                      </tr>
+                      <tr>
+                        <td>120</td>
+                        <td>Davis, Cherokee X.</td>
+                        <td>P.O. Box 238, 2868 At, St.</td>
+                        <td>Aizwal</td>
+                        <td>Jamal</td>
+                        <td>congue@liberoInteger.co.uk</td>
+                        <td>1-491-902-9512</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          &copy; 2018, Service and Asset Tracker&trade;
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="vendors/nprogress/nprogress.js"></script>
+  <!-- iCheck -->
+  <script src="vendors/iCheck/icheck.min.js"></script>
+  <!-- jQuery custom content scroller -->
+  <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <!-- Datatables -->
+  <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+  <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+  <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+  <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+  <!-- Custom Theme Scripts -->
+  <script src="build/js/custom.min.js"></script>
+</body>
+
+</html>
