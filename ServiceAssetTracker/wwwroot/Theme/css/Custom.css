@@ -1,0 +1,18 @@
+﻿.modal-header .close {
+    color: white !important;
+}
+
+.modal-header {
+    background: #2a3e53 !important;
+    color: white !important;
+}
+
+.x_title .btn {
+    color: white !important;
+}
+
+    .x_title .btn:hover {
+        color: #fff !important;
+        background-color: #286090 !important;
+        border-color: #204d74 !important;
+    }

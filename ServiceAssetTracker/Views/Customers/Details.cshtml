@@ -1,0 +1,129 @@
+﻿@model ServiceAssetTracker.Models.ResellerViewModels.Customer
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Reseller Customer</h3>
+            </div>
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>
+                            Account Details
+                        </h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br>
+                        <form data-parsley-validate class="form-horizontal form-label-left">
+                            <div class="form-group">
+                                <label asp-for="CustomerId" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Customer ID
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="CustomerId" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ResellerId" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Reseller ID
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="Reseller.TradingName" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TradingName" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Trading Name
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="TradingName" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address1" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Address line 1
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="Address1" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address2" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Address line 2
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="Address2" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="City" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    City
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="City" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ContractName" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Contact Name
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="ContractName" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Email
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="Email" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Phone" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Phone Number
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input asp-for="Phone" readonly class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.CustomerId">Edit</a>
+                                    <a data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    @Html.Partial("_DeleteModal");
+    var url = "/Customers/DeleteConfirmed/" + Model.CustomerId;
+}
+<input type="hidden" id="hdnUrl" value="@url" />

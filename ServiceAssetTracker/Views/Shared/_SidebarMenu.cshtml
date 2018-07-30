@@ -1,0 +1,245 @@
+﻿<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+        <h3>Main Menu</h3>
+        <ul class="nav side-menu">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fa fa-home"></i> Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-exchange"></i> Reseller
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+                <ul class="nav child_menu">
+                    <li>
+                        <a>
+                            Reseller
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a asp-action="Index" asp-controller="Resellers">List Reseller</a>
+                            </li>
+                            <li>
+                                <a asp-action="Create" asp-controller="Resellers">Add Reseller</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Details" asp-controller="Resellers">Details Reseller</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Edit" asp-controller="Resellers">Edit Reseller</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Delete" asp-controller="Resellers">Delete Reseller</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a>
+                            Reseller Customer
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a asp-action="Index" asp-controller="Customers">List Reseller Customer</a>
+                            </li>
+                            <li>
+                                <a asp-action="Create" asp-controller="Customers">Add Reseller Customer</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Details" asp-controller="Customers">Details Reseller Customer</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Edit" asp-controller="Customers">Edit Reseller Customer</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Delete" asp-controller="Customers">Delete Reseller Customer</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a>
+                            Reseller Service
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a asp-action="Index" asp-controller="Reseller_Service">List Reseller Service</a>
+                            </li>
+                            <li>
+                                <a asp-action="Create" asp-controller="Reseller_Service">Add Reseller Service</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Details" asp-controller="Reseller_Service">Details Reseller Service</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Edit" asp-controller="Reseller_Service">Edit Reseller Service</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Delete" asp-controller="Reseller_Service">Delete Reseller Service</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a>
+                            Reseller DLSM Product
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a asp-action="Index" asp-controller="Products">List DLSM Product</a>
+                            </li>
+                            <li>
+                                <a asp-action="Create" asp-controller="Products">Add DLSM Product</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Details" asp-controller="Products">Details Product</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Edit" asp-controller="Products">Edit Product</a>
+                            </li>
+                            <li class="hidden">
+                                <a asp-action="Delete" asp-controller="Products">Delete Product</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-shopping-cart"></i>Purchase Order
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+
+                <ul class="nav child_menu">
+                    <li>
+                        <a asp-action="Index" asp-controller="Purchase_Order">List Purchase Order</a>
+                    </li>
+                    <li>
+                        <a asp-action="Create" asp-controller="Purchase_Order">Add Purchase Order</a>
+                    </li>
+                    <li class="hidden">
+                        <a asp-action="Details" asp-controller="Purchase_Order">Details Purchase Order</a>
+                    </li>
+                    <li class="hidden">
+                        <a asp-action="Edit" asp-controller="Purchase_Order">Edit Purchase Order</a>
+                    </li>
+                    <li class="hidden">
+                        <a asp-action="Delete" asp-controller="Purchase_Order">Delete Purchase Order</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-sitemap"></i>Job Reference
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+                <ul class="nav child_menu">
+                    <li>
+                        <a asp-action="Index" asp-controller="Job_Reference">List Job Reference</a>
+                    </li>
+                    <li>
+                        <a asp-action="Create" asp-controller="Job_Reference">Add Job Reference</a>
+                    </li>
+                    <li class="hidden">
+                        <a asp-action="Details" asp-controller="Job_Reference">Details Job Reference</a>
+                    </li>
+                    <li class="hidden">
+                        <a asp-action="Edit" asp-controller="Job_Reference">Edit Job Reference</a>
+                    </li>
+                    <li class="hidden">
+                        <a asp-action="Delete" asp-controller="Job_Reference">Delete Job Reference</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-clone"></i> Service Job
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+                <ul class="nav child_menu">
+                    <li>
+                        <a href="service-job.html">
+                            List Service Job
+                        </a>
+                    </li>
+                    <li>
+                        <a href="add-service-job.html">Add Service Job</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-bar-chart-o"></i> Reports
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+                <ul class="nav child_menu">
+                    <li>
+                        <a href="rpt-serial-number.html">Serial Number</a>
+                    </li>
+                    <li>
+                        <a href="rpt-service-billing.html">Ad hoc Service Billing </a>
+                    </li>
+                    <li>
+                        <a href="rpt-dlms.html">DLMS Report </a>
+                    </li>
+                    <li>
+                        <a href="rpt-po.html">Purchase Order Reports </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-users"></i> User Management
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+                <ul class="nav child_menu">
+                    <li>
+                        <a href="users-list.html">
+                            User Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user-activity.html">User Activity</a>
+                    </li>
+                    <li>
+                        <a href="user-add.html">Add User</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-folder-o"></i> Others
+                    <span class="fa fa-chevron-down"></span>
+                </a>
+                <ul class="nav child_menu">
+                    <li>
+                        <a asp-action="Index" asp-controller="StockTypes">
+                            Stock Type
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Index" asp-controller="Categories">Categories</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+</div>

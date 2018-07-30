@@ -1,0 +1,119 @@
+﻿@model ServiceAssetTracker.Models.ResellerViewModels.Reseller_Service
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<hr />
+
+<div class="row">
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Reseller Service</h3>
+                </div>
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>
+                                Detail Reseller Service
+                            </h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br />
+                            <form data-parsley-validate class="form-horizontal form-label-left">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="ResellerServiceId">
+                                        Service ID
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="ResellerServiceId" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="ResellerId">
+                                        Reseller ID
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="Reseller.TradingName" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="ShortDescription">
+                                        Short Description
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="ShortDescription" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="CategoryId">
+                                        Category ID
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="Categories.Name" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="Task">
+                                        Task
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="Task" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="Price">
+                                        Price
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="Price" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" asp-for="Metric">
+                                        Metric
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input asp-for="Metric" readonly class="form-control col-md-7 col-xs-12" />
+                                    </div>
+                                </div>
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                                        <a asp-action="Edit" asp-route-id="@Model.ResellerId" class="btn btn-success">Edit</a>
+                                        <a data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    @Html.Partial("_DeleteModal");
+    var url = "/Reseller_Service/DeleteConfirmed/" + Model.ResellerServiceId;
+}
+<input type="hidden" id="hdnUrl" value="@url" />

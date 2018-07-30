@@ -1,0 +1,103 @@
+﻿@model ServiceAssetTracker.Models.ResellerViewModels.Job_Reference
+
+@{
+    ViewData["Title"] = "Add Job Reference";
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Job Reference</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>
+                            Add Job Reference
+                        </h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        <form asp-action="Create" data-parsley-validate class="form-horizontal form-label-left">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="CustomerReference" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Customer Reference
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" asp-for="CustomerReference" required="required" class="form-control col-md-7 col-xs-12">
+                                    <span asp-validation-for="CustomerReference" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MojoReference" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Mojo Reference
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" asp-for="MojoReference" required="required" class="form-control col-md-7 col-xs-12">
+                                    <span asp-validation-for="MojoReference" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="WorkflowReference" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Workflow Max Reference
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" asp-for="WorkflowReference" required="required" class="form-control col-md-7 col-xs-12">
+                                    <span asp-validation-for="WorkflowReference" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CustomerId" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Reseller Customer ID
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select asp-for="CustomerId" asp-items="ViewBag.CustomerId" required="required" class="form-control col-md-7 col-xs-12"></select>
+                                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Service ID
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control col-md-7 col-xs-12"></select>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
